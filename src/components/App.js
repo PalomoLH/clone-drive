@@ -17,6 +17,10 @@ function App() {
           <Route exact path="/" element={<PrivateRoute />}>
             <Route exact path="/" element={<Dashboard />} />
           </Route>
+          <Route exact path="/folder/:folderId" element={<PrivateRoute />}>
+            <Route exact path="/folder/:folderId" element={<Dashboard />} />
+          </Route>
+
           {/* Profile */}
           <Route exact path="/user" element={<PrivateRoute />}>
             <Route exact path="/user" element={<Profile />} />
